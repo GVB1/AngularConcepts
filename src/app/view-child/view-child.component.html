@@ -1,0 +1,31 @@
+<div class="card card-inverse  mb-3 text-center" style="background-color: #0e5061;; border-color: #333;">
+  <div class="card-block">
+    <blockquote class="card-blockquote">
+     <h3 class="card-title">@ViewChild Decorator</h3>      
+    </blockquote>
+  </div>
+</div>
+
+
+It can be used for 3 things.
+<li>To access variables and methods of other components</li>
+<li>To access template variables of same component</li>
+<li>To access variable and methods of custom directives</li>
+<br />
+
+<h4>1.Access variables and methods of other components</h4>
+Counter Value : {{counter}} 
+<button (click)="increase()">Increase</button> <button (click)="decrease()">Decrease</button>
+<app-test-view-child></app-test-view-child>
+
+<h4>2. Access template variables of same component</h4>
+
+Name : <input type="text" #name /><br /><br />
+Address : <input type="text" #address />
+
+<h4>3. Access variable and methods of custom directives</h4>
+<p redColor>Color of this text should change</p>
+
+Color : <input type="text" (change)="changeColor($event)" />
+Type the color name and press Enter.
+

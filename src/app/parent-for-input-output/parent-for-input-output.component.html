@@ -1,0 +1,13 @@
+<div class="card card-inverse  mb-3 text-center" style="background-color: #0e5061;; border-color: #333;">
+  <div class="card-block">
+    <blockquote class="card-blockquote">
+     <h3 class="card-title">@Input and @Output Decorator</h3>      
+    </blockquote>
+  </div>
+</div>
+
+<p>
+  Sending data from parent to child name = {{name}}
+  <app-child-for-input-output [myName]="name" (fromChild)="getValue($event)"></app-child-for-input-output>
+  Getting data from child to parent, value = {{childValue}}
+</p>

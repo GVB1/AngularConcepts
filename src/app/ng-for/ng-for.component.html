@@ -1,0 +1,12 @@
+<div class="card card-inverse  mb-3 text-center" style="background-color: #0e5061;; border-color: #333;">
+  <div class="card-block">
+    <blockquote class="card-blockquote">
+     <h3 class="card-title">NgFor Directive</h3>      
+    </blockquote>
+  </div>
+</div>
+
+
+  <div *ngFor="let emp of employees; let i=index;let e = even; let o = odd">
+    {{i}} Name: {{emp.name}}  Address: {{emp.address}}         &nbsp;&nbsp;&nbsp;  - is even row {{e}} - is odd Row {{o}}
+  </div>

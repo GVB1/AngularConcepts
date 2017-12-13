@@ -1,0 +1,29 @@
+<div class="card card-inverse  mb-3 text-center" style="background-color: #0e5061;; border-color: #333;">
+  <div class="card-block">
+    <blockquote class="card-blockquote">
+     <h3 class="card-title">Data binding</h3>      
+    </blockquote>
+  </div>
+</div>
+
+<h4>One way Data Binding</h4>
+<h5>1. Using interpolation </h5>
+Name: {{name}}
+<br />
+
+<h5>2. Using Data binding '[]'</h5>
+Name: <input type="text" [value]="name">
+<br />
+
+<h5>3. Using Event binding '()'</h5>
+Name : <input type="text" (change)="changeName($event)">
+<br />Press Enter to see the change
+<br />
+<br />
+
+<h4>Two way data binding - using ngModel</h4>
+Name : <input type="text" [(ngModel)]="name">
+
+<br />
+<br />
+<h6 redColor>Note : ngModel is available in formsModule inside @angular/forms package which must be imported manually</h6>

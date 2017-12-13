@@ -1,0 +1,45 @@
+<div class="card card-inverse  mb-3 text-center" style="background-color: #0e5061;; border-color: #333;">
+  <div class="card-block">
+    <blockquote class="card-blockquote">
+     <h3 class="card-title">Rich Text Editor</h3>      
+    </blockquote>
+  </div>
+</div>
+
+<div container>
+  <div [froalaEditor]='options' [(froalaModel)]="editorContent">Hello, Froala!</div>
+</div>
+
+<div [froalaView]="editorContent"></div>
+
+<button (click)="showData()">Show Data</button>
+
+<br />
+<br />
+
+<h3 redColor>Note :</h3>
+
+<h5> Import : angular-froala-wysiwyg</h5>
+
+<h5>Add the following scripts and styles to angular-cli.json</h5>
+
+<p><b>Scripts</b></p>
+"scripts": [        
+        "../node_modules/jquery/dist/jquery.min.js",
+        "../node_modules/tether/dist/js/tether.min.js",
+        "../node_modules/bootstrap/dist/js/bootstrap.min.js",
+        "../node_modules/jquery/dist/jquery.min.js",
+        "../node_modules/froala-editor/js/froala_editor.pkgd.min.js"
+      ]
+
+<p><b>Styles</b></p>
+ "styles": [
+        "../node_modules/froala-editor/css/froala_editor.pkgd.min.css",
+        "../node_modules/froala-editor/css/froala_style.min.css",
+        "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+        "../node_modules/font-awesome/css/font-awesome.min.css",
+        "styles.css"
+      ]
+
+<p><b>Also add FroalaEditorModule,
+    FroalaViewModule modules in app.modules file.</b></p>

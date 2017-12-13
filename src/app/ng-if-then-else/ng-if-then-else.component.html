@@ -1,0 +1,28 @@
+<div class="card card-inverse  mb-3 text-center" style="background-color: #0e5061;; border-color: #333;">
+  <div class="card-block">
+    <blockquote class="card-blockquote">
+     <h3 class="card-title">NgIF Then Else Directive</h3>      
+    </blockquote>
+  </div>
+</div>
+
+
+Selected Value : 
+<select [(ngModel)]="selectedValue">
+  <option value="true">True</option>
+  <option value="false">False</option>
+</select>
+
+Value : {{selectedValue}}
+<br /><br />
+
+<button (click)="changeValue()">Change Value</button>
+<br /><br />
+<div *ngIf="selectedValue;then thenBlock;else elseBlock"></div>
+
+<ng-template #thenBlock>
+  <div>  Then block is displayed   </div> 
+</ng-template>
+<ng-template #elseBlock>
+  <div>  Else block is displayed   </div> 
+</ng-template>

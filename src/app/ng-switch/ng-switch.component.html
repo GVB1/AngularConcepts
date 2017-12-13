@@ -1,0 +1,16 @@
+<div class="card card-inverse  mb-3 text-center" style="background-color: #0e5061;; border-color: #333;">
+  <div class="card-block">
+    <blockquote class="card-blockquote">
+     <h3 class="card-title">NgSwitch Directive</h3>      
+    </blockquote>
+  </div>
+</div>
+
+
+<div [ngSwitch]="person">
+  <span *ngSwitchCase = "'Mohan'">Hello Mohan.</span>
+  <span *ngSwitchCase = "'Rahul'">Hello Rahul.</span>
+  <span *ngSwitchCase = "'Sohan'">Hello Sohan.</span>
+  <span *ngSwitchCase = "'Rohan'">Hello Rohan.</span>
+  <span *ngSwitchDefault >Default Case is printed</span>
+</div>
